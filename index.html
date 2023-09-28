@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/common/logo-icon.svg">
+    <link rel="stylesheet" href="styles.css">
     <title>Ecohouse</title>
 </head>
 
@@ -12,22 +14,23 @@
     <header class="header">
         <img src="./images/common/Logo.png" alt="logo" class="logo">
         <nav class="header__navbar">
-            <a href="" class="header__navbar__item">Home</a>
-            <a href="" class="header__navbar__item">Products</a>
-            <a href="" class="header__navbar__item">Testimonials</a>
-            <a href="" class="header__navbar__item">Contacts</a>
+            <a href="#hero" class="header__navbar__item">Home</a>
+            <a href="#products" class="header__navbar__item">Products</a>
+            <a href="#testimonials" class="header__navbar__item">Testimonials</a>
+            <a href="#contacts" class="header__navbar__item">Contacts</a>
         </nav>
+        <span />
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero__content">
                 <h1 class="hero__title">Discover the Perfect Furniture Pieces for your Dream Home</h1>
                 <p class="hero__description">Find your Dream Furniture for you home with us, and we will make it happen.
                 </p>
                 <a href="" class="green-button">Order Now</a>
             </div>
-            <img src="./images/hero/hero-image.jpg" alt="green sofa">
+            <img src="./images/hero/hero-image.jpg" class="hero__image" alt="green sofa">
         </section>
 
         <section class="features">
@@ -59,7 +62,7 @@
             </div>
         </section>
 
-        <section class="products">
+        <section class="products" id="products">
             <h2 class="subtitle">Some of our interiors</h2>
 
             <nav class="products__navbar">
@@ -136,7 +139,7 @@
             </article>
         </section>
 
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
 
             <h2 class="subtitle">Testimonials</h2>
 
@@ -191,7 +194,7 @@
             </div>
         </section>
 
-        <section class="banner">
+        <section class="banner" id="contacts">
             <h1 class="banner__title">Order Now and Save 20% on All Furniture</h1>
             <p class="banner__description">
                 Update your home with stylish new furniture at a fraction of the cost.
@@ -204,18 +207,16 @@
 
     <footer class="footer">
         <img src="./images/common/Logo.png" alt="logo" class="logo">
-        <nav class="footer__navbar">
-            <div class="social-icons">
-                <a href="" class="social-icon"><img src="./images/common/Instagram.svg" alt=""></a>
-                <a href="" class="social-icon"><img src="./images/common/Instagram.svg" alt=""></a>
-                <a href="" class="social-icon"><img src="./images/common/Twitter.svg" alt=""></a>
-                <a href="" class="social-icon"><img src="./images/common/YouTube.svg" alt=""></a>
-            </div>
-            <div class="links">
-                <a href="" class="social-icon">Terms of Use</a>
-                <a href="" class="social-icon">Privacy Policy</a>
-            </div>
-        </nav>
+        <div class="social-icons">
+            <a href="" class="social-icon"><img src="./images/common/Instagram.svg" alt=""></a>
+            <a href="" class="social-icon"><img src="./images/common/Instagram.svg" alt=""></a>
+            <a href="" class="social-icon"><img src="./images/common/Twitter.svg" alt=""></a>
+            <a href="" class="social-icon"><img src="./images/common/YouTube.svg" alt=""></a>
+        </div>
+        <div class="links">
+            <a href="" class="link">Terms of Use</a>
+            <a href="" class="link">Privacy Policy</a>
+        </div>
     </footer>
 </body>
 
