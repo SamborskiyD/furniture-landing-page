@@ -66,14 +66,15 @@
             <h2 class="subtitle">Some of our interiors</h2>
 
             <nav class="products__navbar">
-                <span class="products__navbar__item">Living Room</span>
-                <span class="products__navbar__item">Office</span>
-                <span class="products__navbar__item">Bedroom</span>
-                <span class="products__navbar__item">Kitchen</span>
-                <span class="products__navbar__item">Bathroom</span>
+                <span onclick="toggleTab(event, 'living-room')"
+                    class="products__navbar__item products__navbar__item_active">Living Room</span>
+                <span onclick="toggleTab(event, 'office')" class="products__navbar__item">Office</span>
+                <span onclick="toggleTab(event, 'bedroom')" class="products__navbar__item">Bedroom</span>
+                <span onclick="toggleTab(event, 'kitchen')" class="products__navbar__item">Kitchen</span>
+                <span onclick="toggleTab(event, 'bathroom')" class="products__navbar__item">Bathroom</span>
             </nav>
 
-            <article class="product">
+            <article id="living-room" class="product product_active">
                 <img src="./images/tabs/living-room-image.jpg" alt="living room image" class="product__image">
                 <div class="product__content">
                     <h3 class="product__content__title">Living Room</h3>
@@ -86,7 +87,7 @@
                 </div>
             </article>
 
-            <article class="product">
+            <article id="office" class="product">
                 <div class="product__content">
                     <h3 class="product__content__title">Office</h3>
                     <p class="product__content__description">
@@ -99,7 +100,7 @@
                 <img src="./images/tabs/office-image.jpg" alt="office image" class="product__image">
             </article>
 
-            <article class="product">
+            <article id="bedroom" class="product">
                 <img src="./images/tabs/bedroom-image.jpg" alt="bedroom image" class="product__image">
                 <div class="product__content">
                     <h3 class="product__content__title">Bedroom</h3>
@@ -112,7 +113,7 @@
                 </div>
             </article>
 
-            <article class="product">
+            <article id="kitchen" class="product">
                 <div class="product__content">
                     <h3 class="product__content__title">Kitchen</h3>
                     <p class="product__content__description">
@@ -125,7 +126,7 @@
                 <img src="./images/tabs/kitchen-image.jpg" alt="ketchen image" class="product__image">
             </article>
 
-            <article class="product">
+            <article id="bathroom" class="product">
                 <img src="./images/tabs/bathroom-image.jpg" alt="bathroom image" class="product__image">
                 <div class="product__content">
                     <h3 class="product__content__title">Kitchen</h3>
@@ -219,5 +220,5 @@
         </div>
     </footer>
 </body>
-
+<script src="script.js"></script>
 </html>
