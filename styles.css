@@ -6,13 +6,12 @@
 }
 
 body {
-    background-color: #E8F3F5;
+    background-color: #FFFFFF;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     color: #064635;
 }
-
 
 /* Header  */
 
@@ -87,7 +86,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     background-color: #00C88F;
-    color: #E8F3F5;
+    color: #FFFFFF;
     font-size: 36px;
     font-weight: 700;
     text-decoration: none;
@@ -99,7 +98,7 @@ body {
 .green-button:hover {
     transition: all 0.5s ease;
     color: #00C88F;
-    background-color: #E8F3F5;
+    background-color: #FFFFFF;
     border: solid 3px #00C88F;
 }
 
@@ -109,13 +108,13 @@ body {
 }
 
 .green-button_color_white {
-    background-color: #E8F3F5;
+    background-color: #FFFFFF;
     color: #00C88F;
 }
 
 .green-button_color_white:hover {
     transition: all 0.25s ease;
-    background-color: #D2E4D6;
+    background-color: #E8F3F5;
     border: none;
 }
 
@@ -126,19 +125,20 @@ body {
     align-items: stretch;
     justify-content: space-between;
     gap: 40px;
-    padding: 55px 40px;
+    margin: 55px 0;
+    padding: 0 40px;
 }
 
 .feature {
     background-color: #00C88F;
-    color: #E8F3F5;
+    color: #FFFFFF;
     box-shadow: 2px 4px 20px 0px rgba(6, 70, 53, 0.50);
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     flex-shrink: 6;
 }
@@ -179,7 +179,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 20px;
 }
 
 .products__navbar__item {
@@ -201,6 +202,10 @@ body {
     justify-content: space-between;
     gap: 20px;
     animation: fade 2s;
+}
+
+.product:nth-child(even){
+    flex-direction: row-reverse;
 }
 
 .product_active{
@@ -238,10 +243,9 @@ body {
 
 .testimonials__cards {
     margin-top: 30px;
-    padding: 0 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 40px
 }
 
@@ -278,6 +282,7 @@ body {
 }
 
 .card__content__name {
+    text-align: center;
     font-size: 24px;
     font-weight: 600;
     color: #00C88F;
@@ -293,7 +298,8 @@ body {
 .banner {
     background-color: #00C88F;
     margin: 120px 0 160px;
-    height: 480px;
+    padding: 40px 20px;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,15 +308,16 @@ body {
 }
 
 .banner__title {
-    color: #E8F3F5;
+    color: #FFFFFF;
     font-size: 64px;
     font-weight: 700;
     line-height: 1.25em;
+    text-align: center;
 }
 
 .banner__description {
     text-align: center;
-    color: #D2E4D6;
+    color: #E8F3F5;
     font-size: 24px;
     line-height: 150%;
     max-width: 700px;
@@ -320,11 +327,13 @@ body {
 
 .footer{
     padding: 20px 40px;
-    background-color: #D2E4D6;
+    background-color: #E8F3F5;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 30px;
 }
 
 .social-icons{
@@ -355,4 +364,72 @@ body {
 @keyframes fade {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+
+@media(max-width: 1024px) {
+    .hero__title {
+        font-size: 48px;
+    }
+    .hero__description {
+        font-size: 24px;
+    }
+    .green-button{
+        max-width: 240px;
+        font-size: 30px;
+    }
+    .green-button_size_small{
+        max-width: 180px;
+        font-size: 24px;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .feature__title{
+        font-size: 24px;
+    }
+    .feature__text{
+        font-size: 18px;
+    }
+    .products__navbar{
+        column-gap: 40px;
+    }
+    .products__navbar__item{
+        font-size: 26px;
+    }
+    .product__content{
+        padding: 0 20px;
+    }
+    .product__content__title{
+        font-size: 30px;
+    }
+    .product__content__description{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .card__image{
+        width: 100px;
+        margin-bottom: -60px;
+    }
+    .card__content{
+        padding-top: 80px;
+    }
+    .card__content__quote{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .card__content__name{
+        font-size: 20px;
+    }
+    .banner{
+        margin: 100px 0;
+        min-height: 360px;
+        gap: 25px;
+    }
+    .banner__title{
+        font-size: 48px;
+    }
+    .banner__description{
+        font-size: 20px;
+    }
 }
