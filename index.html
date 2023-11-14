@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <picture class="hero__picture">
+        <picture>
             <source media="(min-width: 769px)" srcset="./images/common/Logo.png">
             <source media="(max-width: 768px)" srcset="./images/common/logo-mobile.png">
             <img src="./images/common/Logo.png" alt="logo" class="logo">
@@ -24,7 +24,7 @@
             <a href="#testimonials" class="header__navbar__item">Testimonials</a>
             <a href="#contacts" class="header__navbar__item">Contacts</a>
         </nav>
-        <span></span>
+        <span class="burger-menu" onclick="toggleNav(event)"></span>
     </header>
 
     <main>

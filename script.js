@@ -14,3 +14,10 @@ function toggleTab(event, tabName) {
     event.target.classList.add('products__navbar__item_active')
     document.getElementById(tabName).classList.add('product_active')
 }
+
+function toggleNav(event) {
+    let nav = document.querySelector('.header__navbar')
+    event.target.classList.toggle('burger-menu_open')
+
+    nav.classList.toggle('header__navbar_open')
+}
