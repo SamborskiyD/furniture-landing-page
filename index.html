@@ -13,7 +13,11 @@
 
 <body>
     <header class="header">
-        <img src="./images/common/Logo.png" alt="logo" class="logo">
+        <picture class="hero__picture">
+            <source media="(min-width: 769px)" srcset="./images/common/logo.png">
+            <source media="(max-width: 768px)" srcset="../images/common/logo-mobile.png">
+            <img src="./images/common/logo.png" alt="logo" class="logo">
+        </picture>
         <nav class="header__navbar">
             <a href="#hero" class="header__navbar__item">Home</a>
             <a href="#products" class="header__navbar__item">Products</a>
@@ -31,7 +35,11 @@
                 </p>
                 <a href="" class="green-button">Order Now</a>
             </div>
-            <img src="./images/hero/hero-image.jpg" class="hero__image" alt="green sofa">
+            <picture class="hero__picture">
+                <source media="(min-width: 769px)" srcset="./images/hero/hero-image.jpg">
+                <source media="(max-width: 768px)" srcset="./images/hero/hero-image-mobile.jpg">
+                <img src="./images/hero/hero-image.jpg" class="hero__image" alt="green sofa">
+            </picture>
         </section>
 
         <section class="features">

@@ -73,10 +73,12 @@ body {
     line-height: 1.25em;
     margin: 30px 0;
 }
-
-.hero__image {
-    height: auto;
+.hero__content, .hero__picture{
     width: 50%;
+}
+
+.hero__image{
+    width: 100%;
 }
 
 /* Buttons */
@@ -122,14 +124,14 @@ body {
 
 .features {
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 40px;
     margin: 55px 0;
     padding: 0 40px;
 }
 
 .feature {
+    max-width: 425px;
     background-color: #00C88F;
     color: #FFFFFF;
     box-shadow: 2px 4px 20px 0px rgba(6, 70, 53, 0.50);
@@ -204,11 +206,11 @@ body {
     animation: fade 2s;
 }
 
-.product:nth-child(even){
+.product:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.product_active{
+.product_active {
     display: flex;
 }
 
@@ -325,7 +327,7 @@ body {
 
 /* Footer  */
 
-.footer{
+.footer {
     padding: 20px 40px;
     background-color: #E8F3F5;
     display: flex;
@@ -336,7 +338,7 @@ body {
     row-gap: 30px;
 }
 
-.social-icons{
+.social-icons {
     max-width: 400px;
     width: 100%;
     display: flex;
@@ -345,7 +347,7 @@ body {
     gap: 40px;
 }
 
-.links{
+.links {
     max-width: 400px;
     width: 100%;
     display: flex;
@@ -354,82 +356,175 @@ body {
     gap: 40px;
 }
 
-.link{
+.link {
     color: #064635;
     font-size: 24px;
     font-weight: 800;
     text-decoration: none;
+    text-align: center;
 }
 
 @keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
 @media(max-width: 1024px) {
+    .header__navbar {
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .header__navbar__item {
+        font-size: 20px;
+    }
+
     .hero__title {
         font-size: 48px;
     }
+
     .hero__description {
         font-size: 24px;
     }
-    .green-button{
+
+    .green-button {
         max-width: 240px;
         font-size: 30px;
     }
-    .green-button_size_small{
+
+    .green-button_size_small {
         max-width: 180px;
         font-size: 24px;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 40px;
     }
-    .feature__title{
+
+    .feature__title {
         font-size: 24px;
     }
-    .feature__text{
+
+    .feature__text {
         font-size: 18px;
     }
-    .products__navbar{
+
+    .products__navbar {
         column-gap: 40px;
     }
-    .products__navbar__item{
+
+    .products__navbar__item {
         font-size: 26px;
     }
-    .product__content{
+
+    .product__content {
         padding: 0 20px;
     }
-    .product__content__title{
+
+    .product__content__title {
         font-size: 30px;
     }
-    .product__content__description{
+
+    .product__content__description {
         font-size: 20px;
         margin: 20px 0;
     }
-    .card__image{
+
+    .card__image {
         width: 100px;
         margin-bottom: -60px;
     }
-    .card__content{
+
+    .card__content {
         padding-top: 80px;
     }
-    .card__content__quote{
+
+    .card__content__quote {
         font-size: 18px;
         margin-bottom: 20px;
     }
-    .card__content__name{
+
+    .card__content__name {
         font-size: 20px;
     }
-    .banner{
+
+    .banner {
         margin: 100px 0;
         min-height: 360px;
         gap: 25px;
     }
-    .banner__title{
+
+    .banner__title {
         font-size: 48px;
     }
-    .banner__description{
+
+    .banner__description {
         font-size: 20px;
     }
+}
+
+@media(max-width: 860px) {
+    .testimonials__cards {
+        flex-direction: column;
+    }
+    .card{
+        max-width: 80%;
+    }
+}
+
+@media(max-width: 768px) {
+    .header{
+        padding: 10px 20px;
+    }
+    .header__navbar {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .hero__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .hero__image{
+        width: 100%;
+    }
+    .hero__content, .hero__picture{
+        width: 100%;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .feature{
+        max-width: 500px;
+    }
+    .products{
+        padding: 0 20px;
+    }
+    .product, .product:nth-child(even) {
+        flex-direction: column;
+    }
+    .product__image {
+        width: 100%;
+    }
+    .product__content{
+        padding: 0;
+    }
+}
+
+@media(max-width: 525px) {
+
 }
